@@ -8,7 +8,6 @@
     android:paddingBottom="6dp"
     android:focusable="false">
 
-    <!--  大字：假名主体（平假名或片假名）-->
     <TextView
         android:id="@+id/tv_item_qing_ping"
         android:layout_width="wrap_content"
@@ -18,7 +17,6 @@
         android:textColor="#333333"
         android:text="あ" />
 
-    <!-- 小字：罗马字注音 -->
     <TextView
         android:id="@+id/tv_item_ruoma"
         android:layout_width="wrap_content"

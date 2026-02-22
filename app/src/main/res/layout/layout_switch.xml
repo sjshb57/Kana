@@ -4,7 +4,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <!-- 平假名按钮（左侧，左边圆角） -->
     <com.sjshb57.kana.view.ColorChangeButton
         android:id="@+id/btn_switch_left"
         android:layout_width="72dp"
@@ -23,7 +22,6 @@
         app:backgroundTopRightCorner="0dp"
         app:backgroundBottomRightCorner="0dp" />
 
-    <!-- 片假名按钮（右侧，右边圆角） -->
     <com.sjshb57.kana.view.ColorChangeButton
         android:id="@+id/btn_switch_right"
         android:layout_width="72dp"
