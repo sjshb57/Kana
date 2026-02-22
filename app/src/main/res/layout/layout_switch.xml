@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- 平假名按钮（左侧，左边圆角） -->
+    <com.sjshb57.kana.view.ColorChangeButton
+        android:id="@+id/btn_switch_left"
+        android:layout_width="72dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="平假名"
+        android:textSize="12sp"
+        app:normalBackgroundColor="#FFFFFF"
+        app:selectedBackgroundColor="#ff5e5e"
+        app:normalTextColor="#ff5e5e"
+        app:selectedTextColor="#FFFFFF"
+        app:backgroundStrokeColor="#ff5e5e"
+        app:backgroundStrokeWidth="1dp"
+        app:backgroundTopLeftCorner="4dp"
+        app:backgroundBottomLeftCorner="4dp"
+        app:backgroundTopRightCorner="0dp"
+        app:backgroundBottomRightCorner="0dp" />
+
+    <!-- 片假名按钮（右侧，右边圆角） -->
+    <com.sjshb57.kana.view.ColorChangeButton
+        android:id="@+id/btn_switch_right"
+        android:layout_width="72dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="片假名"
+        android:textSize="12sp"
+        android:layout_toRightOf="@id/btn_switch_left"
+        app:normalBackgroundColor="#FFFFFF"
+        app:selectedBackgroundColor="#ff5e5e"
+        app:normalTextColor="#ff5e5e"
+        app:selectedTextColor="#FFFFFF"
+        app:backgroundStrokeColor="#ff5e5e"
+        app:backgroundStrokeWidth="1dp"
+        app:backgroundTopLeftCorner="0dp"
+        app:backgroundBottomLeftCorner="0dp"
+        app:backgroundTopRightCorner="4dp"
+        app:backgroundBottomRightCorner="4dp" />
+
+</RelativeLayout>

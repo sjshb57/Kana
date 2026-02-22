@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_adapter_grid_item"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@drawable/grid_selector_background"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:focusable="false">
+
+    <!--  大字：假名主体（平假名或片假名）-->
+    <TextView
+        android:id="@+id/tv_item_qing_ping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:text="あ" />
+
+    <!-- 小字：罗马字注音 -->
+    <TextView
+        android:id="@+id/tv_item_ruoma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_qing_ping"
+        android:layout_centerHorizontal="true"
+        android:textSize="10sp"
+        android:textColor="#888888"
+        android:text="a" />
+
+</RelativeLayout>
