@@ -28,6 +28,11 @@ android {
             )
         }
     }
+
+    defaultConfig {
+        resourceConfigurations.addAll(listOf("zh", "zh-rCN", "zh-rTW"))
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
@@ -41,7 +46,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    implementation(libs.androidx.viewpager)
-    implementation(libs.google.gson)
 }

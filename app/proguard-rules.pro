@@ -20,14 +20,30 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
-# 保护 Kana 数据类，Gson反序列化需要字段名不变
--keep class com.sjshb57.kana.model.** { *; }
+# 保留数据类
+-keep class com.sjshb57.kana.model.Kana { *; }
 
-# 保护自定义View，布局XML里直接引用类名
+# 保留自定义View（XML里引用）
 -keep class com.sjshb57.kana.view.** { *; }
 
-# Gson
--keepattributes Signature
--keepattributes *Annotation*
--dontwarn sun.misc.**
--keep class com.google.gson.** { *; }
+# 保留Fragment（FragmentManager用类名反射）
+-keep class com.sjshb57.kana.module.** extends androidx.fragment.app.Fragment { *; }
+
+# 保留Activity
+-keep class com.sjshb57.kana.module.*.** extends android.app.Activity { *; }
+-keep class com.sjshb57.kana.** extends androidx.appcompat.app.AppCompatActivity { *; }
+
+# 移除日志
+-assumenosideeffects class android.util.Log {
+    public static int v(...);
+    public static int d(...);
+    public static int i(...);
+    public static int w(...);
+    public static int e(...);
+}
+
+# 激进优化
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-allowaccessmodification
+-mergeinterfacesaggressively
